@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.diamonddev.democracy.Democracy"
+    ],
+    "client": [
+      "net.diamonddev.democracy.client.DemocracyClient"
     ]
   },
   "mixins": [

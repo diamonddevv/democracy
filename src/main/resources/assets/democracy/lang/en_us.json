@@ -1,4 +1,4 @@
 {
   "rule.dumb": "skidoosh",
-  "rule.exploding_pickup": "Stacks of %s %s explode"
+  "rule.exploding_item": "Stacks of %s explode"
 }

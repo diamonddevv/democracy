@@ -16,9 +16,10 @@ import java.util.stream.Stream;
 public class DumbRule extends OneShotRule {
 
     private final Codec<DumbRule.DumbRuleChange> codec;
+    private final DumbRuleChange change = new DumbRuleChange();
 
     public DumbRule() {
-        this.codec = Codec.unit(DumbRuleChange::new);
+        this.codec = Codec.unit(change);
     }
 
     @Override
@@ -28,7 +29,7 @@ public class DumbRule extends OneShotRule {
 
     @Override
     public Stream<RuleChange> randomApprovableChanges(MinecraftServer minecraftServer, RandomSource randomSource, int i) {
-        return null;
+        return Stream.empty();
     }
 
     private class DumbRuleChange extends OneShotRuleChange {
@@ -40,9 +41,8 @@ public class DumbRule extends OneShotRule {
 
         @Override
         public void run(MinecraftServer minecraftServer) {
-            minecraftServer.getPlayerList().getPlayers().forEach(serverPlayer -> {
-                ServerPlayNetworking.send(serverPlayer, Netcode.CRASH_PACKET_CHANNEL, CrashGamePacket.write("skidoosh", serverPlayer));
-            });
+            minecraftServer.getPlayerList().getPlayers().forEach(serverPlayer ->
+                    ServerPlayNetworking.send(serverPlayer, Netcode.CRASH_PACKET_CHANNEL, CrashGamePacket.write("skidoosh", serverPlayer)));
         }
     }
 }

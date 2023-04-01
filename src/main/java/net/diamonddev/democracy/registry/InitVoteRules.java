@@ -20,6 +20,6 @@ public class InitVoteRules {
 
 
     public static <T extends Rule> T createVoteRule(Identifier id, T rule) {
-        return Registry.register(BuiltInRegistries.RULE, id.toResLoc(), rule);
+        return Registry.register(BuiltInRegistries.RULE, id, rule);
     }
 }

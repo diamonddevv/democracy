@@ -10,10 +10,8 @@ public class DemocracyClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ClientPlayNetworking.registerGlobalReceiver(Netcode.CRASH_PACKET_CHANNEL, ((client, handler, buf, responseSender) -> {
-           // get packet
             CrashGamePacket.CrashGamePacketData data = CrashGamePacket.read(buf);
-
-            client.delayCrash(new CrashReport(data.string, new Throwable("Intential Mod Design")));
+            client.delayCrash(new CrashReport(data.string, new Throwable("Intentional Mod Design")));
         }));
     }
 }
