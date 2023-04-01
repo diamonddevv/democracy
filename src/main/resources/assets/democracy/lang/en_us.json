@@ -1,4 +1,5 @@
 {
-  "rule.dumb": "skidoosh",
-  "rule.exploding_item": "Stacks of %s explode"
+  "rule.crash": "skidoosh",
+  "rule.crashier": "skidoosh but harder",
+  "rule.rickroll": "Play a really good song"
 }
