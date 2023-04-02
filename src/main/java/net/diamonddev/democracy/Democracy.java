@@ -1,9 +1,10 @@
 package net.diamonddev.democracy;
 
+import net.diamonddev.democracy.bribes.BribeLoader;
 import net.diamonddev.democracy.fuckmojmaps.Identifier;
-import net.diamonddev.democracy.registry.InitVoteRules;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.resources.ResourceLocation;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.minecraft.server.packs.PackType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,6 +21,7 @@ public class Democracy implements ModInitializer {
 		//
 
 		LOGGER.info("In the wise words of Ben Kenobi, DEMOCRACY");
+		ResourceManagerHelper.get(PackType.SERVER_DATA).registerReloadListener(new BribeLoader());
 
 		//
 		long initTime = System.currentTimeMillis() - start;

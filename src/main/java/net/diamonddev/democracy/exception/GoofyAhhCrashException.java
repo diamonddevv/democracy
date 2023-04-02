@@ -4668,7 +4668,8 @@ public class GoofyAhhCrashException extends Exception {
         JOKE("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCqWy3kOmeRhCj1CmFXAQ_8tEghdYn8-eXIw&usqp=CAU"),
         MMMMMMMMMMMMM("https://i.kym-cdn.com/entries/icons/original/000/029/618/cover7.jpg"),
         FALLING_KINGDOM("https://www.youtube.com/watch?v=Z0M8NfPufaU"),
-        TUTORIAL("How to be cool: A) Sunglasses Emoji B)");
+        TUTORIAL("How to be cool: A) Sunglasses Emoji B)"),
+        ACIKEK("acikek was here");
 
         private final String reason;
         GoofyAhhReasonToCrash(String s) {
