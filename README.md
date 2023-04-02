@@ -1,2 +1,3 @@
 # DEMoCRAcY
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ak516vtDTEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+[![my ALLEGIANCE is to THE REPUBLIC, to DEMOCRACY](http://img.youtube.com/vi/Ak516vtDTEA/0.jpg)](http://www.youtube.com/watch?v=Ak516vtDTEA)

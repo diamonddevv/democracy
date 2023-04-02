@@ -6,7 +6,8 @@
   "name": "democracy",
   "description": "bottom text",
   "authors": [
-    "DiamondDev"
+    "DiamondDev",
+    "Acikek"
   ],
   "contact": {
     "homepage": "https://diamonddevv.github.io/",
@@ -28,6 +29,8 @@
   "mixins": [
     "democracy.mixins.json"
   ],
+
+  "accessWidener": "democracy.accesswidener",
 
   "depends": {
     "fabricloader": ">=0.14.19",

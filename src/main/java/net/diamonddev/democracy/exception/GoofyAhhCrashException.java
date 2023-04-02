@@ -4669,7 +4669,19 @@ public class GoofyAhhCrashException extends Exception {
         MMMMMMMMMMMMM("https://i.kym-cdn.com/entries/icons/original/000/029/618/cover7.jpg"),
         FALLING_KINGDOM("https://www.youtube.com/watch?v=Z0M8NfPufaU"),
         TUTORIAL("How to be cool: A) Sunglasses Emoji B)"),
-        ACIKEK("acikek was here");
+        ACIKEK("acikek was here"),
+        ANOTHER_ONE_BITES_THE_DUST("dun dun dun - "),
+        TOM_SCOTT("https://i.kym-cdn.com/entries/icons/original/000/035/468/EkC6nA9XYAEgcZG.png"),
+        I_FORGOR(":skull:"),
+        FUCK("mod.jar has stopped working. this is intentional. lol."),
+        WAIT_WHY_IS_THIS_USEFUL("""
+                In case you got this one, let me tell you some fun facts:
+                This mod was made for Flashfest, but my dumbass forgot to finish it in the actual time boundary, so it was late to a deadline that doesnt even exist.
+                This Enum that these messages come from has a lot of responses. The file, GoofyAhhCrashException.java, is over 4500 lines long. Thats because the entire
+                bee movie script is in here. Seriously.
+                You can see all the messages that the exception can throw here -> https://github.com/diamonddevv/democracy/blob/1.19/src/main/java/net/diamonddev/democracy/exception/GoofyAhhCrashException.java
+                Have fun with this, dumb, dumb DUMB joke mod. April Fools, bitch.
+                """);
 
         private final String reason;
         GoofyAhhReasonToCrash(String s) {
