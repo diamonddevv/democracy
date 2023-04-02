@@ -1,5 +1,6 @@
 package net.diamonddev.democracy.mixin;
 
+import net.diamonddev.democracy.bribes.Bribe;
 import net.minecraft.network.protocol.game.ServerboundVoteCastPacket;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerPlayer;
@@ -22,11 +23,12 @@ public class ServerGamePacketListenerImplMixin {
 
     @Inject(method = "handleVoteCast", at = @At(value = "INVOKE", target = "Lnet/minecraft/voting/votes/ServerVoteStorage$OptionAccess;addVotes(Lnet/minecraft/world/entity/Entity;I)V"))
     private void democracy$bribery(ServerboundVoteCastPacket serverboundVoteCastPacket, CallbackInfo ci) {
-        if (player.getOffhandItem().getItem() == Items.GOLD_INGOT) {
+        int multiplier = Bribe.getVoteMultiplier(player.getOffhandItem(), player);
+        if (multiplier != -1) {
             int i = player.getOffhandItem().getCount();
             ServerVoteStorage.OptionAccess optionAccess = this.server.getVoteStorage().getOptionAccess(serverboundVoteCastPacket.optionId());
             if (optionAccess != null) {
-                optionAccess.addVotes(player, i);
+                optionAccess.addVotes(player, i * multiplier);
                 player.setItemInHand(InteractionHand.OFF_HAND, ItemStack.EMPTY);
             }
         }

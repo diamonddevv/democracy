@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "material": {
+        "item": "minecraft:gold_ingot"
+      },
+      "multiply": 1,
+      "stat_boost": "minecraft:mob_kills"
+    },
+    {
+      "material": {
+        "item": "minecraft:diamond"
+      },
+      "multiply": 5,
+      "stat_boost": "minecraft:player_kills"
+    },
+    {
+      "material": {
+        "item": "minecraft:emerald"
+      },
+      "multiply": 2.5,
+      "stat_boost": "minecraft:traded_with_villager"
+    }
+  ]
+}
