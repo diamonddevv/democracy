@@ -4,6 +4,7 @@
   "package": "net.diamonddev.democracy.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "RulesAccessor",
     "RulesMixin",
     "ServerGamePacketListenerImplMixin",
     "StatTypeAccessor"
